@@ -1,0 +1,27 @@
+<div class="dashboard-header">
+  <div class="ham-burger-button-outer" (click)="hideSlider()">
+    <div class="inner-row"></div>
+    <div class="inner-row" style="width: 50%"></div>
+    <div class="inner-row"></div>
+  </div>
+
+
+  <p>Welcome to IJSE | Hi "{{userName}}"!</p>
+</div>
+
+<div class="slider-wrap" *ngIf="sliderVisibleState" [@53_ani]>
+  <ul>
+    <li routerLink="/dashboard">Home</li>
+    <li routerLink="/customer">Customer</li>
+    <li routerLink="/item">Items</li>
+    <li routerLink="/orderDetail">Orders</li>
+    <li routerLink="/placeOrder">Make Order</li>
+    <li>Activities</li>
+    <li>Advertisement</li>
+    <li>Sign Out</li>
+  </ul>
+</div>
+
+<div style="height: 100vh">
+  <router-outlet></router-outlet>
+</div>

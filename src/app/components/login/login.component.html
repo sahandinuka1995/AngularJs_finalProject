@@ -1,0 +1,84 @@
+<div class="container">
+  <p class="txt-header">Login Form</p>
+  <hr>
+
+  <mat-tab-group>
+    <mat-tab label="Login">
+      <br>
+      <!--      <p>{{sampleData}}</p>-->
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+      <br>
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <div class="col-12 col-sm-6 col-md-6">
+            <form>
+              <!--              <div class="form-group">-->
+              <!--                <label for="email">Email address</label>-->
+              <!--                <input #emailComp (keyup)="setEmailData(emailComp.value)" type="email" class="form-control" id="email" aria-describedby="emailHelp">-->
+              <!--              </div>-->
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input [(ngModel)]="userEmail" type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                       name="email">
+                <p *ngIf="userEmailErrorState" class="alert alert-danger">User email is reqired!</p>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input [(ngModel)]="userPassword" type="email" class="form-control" id="password"
+                       aria-describedby="emailHelp" name="password">
+                <p *ngIf="userPasswordErrorState" class="alert alert-danger">User password is reqired!</p>
+              </div>
+              <input (click)="login()" type="button" class="btn btn-primary" value="Login">
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Sign up">
+      <br>
+      <!--      <p>{{sampleData}}</p>-->
+      <mat-progress-bar *ngIf="signUploading" mode="indeterminate"></mat-progress-bar>
+
+      <br>
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <div class="col-12 col-sm-6 col-md-6">
+            <form>
+              <!--              <div class="form-group">-->
+              <!--                <label for="email">Email address</label>-->
+              <!--                <input #emailComp (keyup)="setEmailData(emailComp.value)" type="email" class="form-control" id="email" aria-describedby="emailHelp">-->
+              <!--              </div>-->
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input [(ngModel)]="signUpEmail" type="email" class="form-control" id="signUpemail"
+                       aria-describedby="emailHelp" name="signUpemail">
+                <p *ngIf="signUpEmailErrorState" class="alert alert-danger">User email is reqired!</p>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input [(ngModel)]="signUpPassword" type="email" class="form-control" id="signUpPassword"
+                       aria-describedby="emailHelp" name="signUpPassword">
+                <p *ngIf="signUpPasswordErrorState" class="alert alert-danger">User password is reqired!</p>
+              </div>
+              <div class="form-group">
+                <label for="email">Name</label>
+                <input [(ngModel)]="signUpName" type="name" class="form-control" id="signUpName"
+                       aria-describedby="emailHelp" name="signUpName">
+                <p *ngIf="signUpNameErrorState" class="alert alert-danger">User email is reqired!</p>
+              </div>
+              <div class="form-group">
+                <label for="email">Contact</label>
+                <input [(ngModel)]="signUpContact" type="contact" class="form-control" id="signUpContact"
+                       aria-describedby="emailHelp" name="signUpContact">
+                <p *ngIf="signUpContactErrorState" class="alert alert-danger">User email is reqired!</p>
+              </div>
+              <input (click)="signUp()" type="button" class="btn btn-success" value="Register">
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>

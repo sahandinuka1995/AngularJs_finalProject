@@ -12,12 +12,26 @@ import {HttpClientModule} from '@angular/common/http';
 import {DashBoardComponent} from './components/dash-board/dash-board.component';
 import {LoginComponent} from './components/login/login.component';
 import {CookieModule} from 'ngx-cookie';
+import {FooterComponent} from './components/footer/footer.component';
+import {DefaultComponent} from './components/dash-board/items/default/default.component';
+import {ManageCustomerComponent} from './components/manage-customer/manage-customer.component';
+import {AllItemsComponent} from './components/all-items/all-items.component';
+import {OrderDetailsComponent} from './components/order-details/order-details.component';
+import {PlaceOrderComponent} from './components/place-order/place-order.component';
+import {SignOutComponent} from './components/sign-out/sign-out.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashBoardComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
+    DefaultComponent,
+    ManageCustomerComponent,
+    AllItemsComponent,
+    OrderDetailsComponent,
+    PlaceOrderComponent,
+    SignOutComponent
   ],
   imports: [
     BrowserModule,
