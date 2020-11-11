@@ -12,12 +12,12 @@ import {PlaceOrderComponent} from './components/place-order/place-order.componen
 const routes: Routes = [
   {path: '', component: LoginComponent, pathMatch: 'full'},
   {
-    path: 'dashboard/:user', component: DashBoardComponent, canActivate: [AuthGuard], pathMatch: 'full', children: [
+    path: 'dashboard', component: DashBoardComponent, canActivate: [AuthGuard], children: [
       {path: '', component: DefaultComponent},
-      {path: 'customer', component: ManageCustomerComponent},
-      {path: 'item', component: AllItemsComponent},
-      {path: 'orderDetail', component: OrderDetailsComponent},
-      {path: 'placeOrder', component: PlaceOrderComponent},
+      {path: 'manage-customer', component: ManageCustomerComponent},
+      {path: 'all-item', component: AllItemsComponent},
+      {path: 'order-details', component: OrderDetailsComponent},
+      {path: 'place-order', component: PlaceOrderComponent},
     ]
   },
   {path: '**', component: LoginComponent}

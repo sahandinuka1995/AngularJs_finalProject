@@ -19,6 +19,7 @@ import {AllItemsComponent} from './components/all-items/all-items.component';
 import {OrderDetailsComponent} from './components/order-details/order-details.component';
 import {PlaceOrderComponent} from './components/place-order/place-order.component';
 import {SignOutComponent} from './components/sign-out/sign-out.component';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {SignOutComponent} from './components/sign-out/sign-out.component';
     MatTabsModule,
     FormsModule,
     MatProgressBarModule,
+    MatButtonModule,
     ToastrModule.forRoot(),
     HttpClientModule,
     CookieModule.forRoot()

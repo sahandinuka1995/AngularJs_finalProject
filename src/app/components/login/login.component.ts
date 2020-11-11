@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit {
         this.onWarning('Login Success!');
         this.loading = true;
 
-        this.router.navigate(['/dashboard', obj.name]).then();
+        this.router.navigate(['/dashboard']).then();
       }
     });
 

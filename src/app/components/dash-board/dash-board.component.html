@@ -11,14 +11,14 @@
 
 <div class="slider-wrap" *ngIf="sliderVisibleState" [@53_ani]>
   <ul>
-    <li routerLink="/dashboard">Home</li>
-    <li routerLink="/customer">Customer</li>
-    <li routerLink="/item">Items</li>
-    <li routerLink="/orderDetail">Orders</li>
-    <li routerLink="/placeOrder">Make Order</li>
+    <li routerLink="/dashboard" (click)="hideSlider()">Home</li>
+    <li routerLink="/dashboard/manage-customer" (click)="hideSlider()">Customer</li>
+    <li routerLink="/all-item" (click)="hideSlider()">Items</li>
+    <li routerLink="/order-details" (click)="hideSlider()">Orders</li>
+    <li routerLink="/place-order" (click)="hideSlider()">Make Order</li>
     <li>Activities</li>
     <li>Advertisement</li>
-    <li>Sign Out</li>
+    <li (click)="signOut()">Sign Out</li>
   </ul>
 </div>
 
