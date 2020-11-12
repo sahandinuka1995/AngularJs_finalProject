@@ -19,7 +19,8 @@ import {AllItemsComponent} from './components/all-items/all-items.component';
 import {OrderDetailsComponent} from './components/order-details/order-details.component';
 import {PlaceOrderComponent} from './components/place-order/place-order.component';
 import {SignOutComponent} from './components/sign-out/sign-out.component';
-import {MatButtonModule} from "@angular/material/button";
+import {MatButtonModule} from '@angular/material/button';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {MatButtonModule} from "@angular/material/button";
     MatButtonModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

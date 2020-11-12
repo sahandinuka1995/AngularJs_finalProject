@@ -39,6 +39,7 @@ export class DashBoardComponent implements OnInit {
 
   }
 
+  // tslint:disable-next-line:typedef
   public hideSlider() {
     // if (this.sliderVisibleState){
     //   this.sliderVisibleState = false;
@@ -51,9 +52,9 @@ export class DashBoardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userName = this.activatedRouter.snapshot.paramMap.get('user');
   }
 
+  // tslint:disable-next-line:typedef
   signOut() {
     if (confirm('are you sure?')) {
       this.cookieService.remove('user53');

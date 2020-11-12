@@ -128,11 +128,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
   private isLogged() {
     const tempUser = this.cookieService.getObject('user53');
     if (tempUser !== undefined) {
       // @ts-ignore
-      this.router.navigate(['/dashboard', tempUser.name]).then();
+      this.router.navigate(['/dashboard']).then();
     }
   }
 }
